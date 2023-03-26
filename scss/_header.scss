@@ -1,11 +1,11 @@
 header{
-    width: 450px;
+    width: 400px;
     height: 100%;
     position: absolute;
     top: 0px;
     left: 0px;
     background: rgba(0,0,0,.2);
-    backdrop-filter: blur(2px);
+    --webkit-backdrop-filter: blur(2px);
     z-index: 4;
 
     h1{
@@ -13,18 +13,28 @@ header{
         top: 50%;
         left: 50px;
         margin-top: -300px;
-        font: bold 40px/1 'orbitron';
+        font: bold 40px/1 'Dangdanghae';
         color: #fff;
         &::after {
             content: '';
             display: block;
-            width: 160px;
-            height: 3px;
+            width: 292px;
+            height: 2px;
             background: #fff;
-            margin-top: 8px;
+            margin-top: 5px;
 
 
         }
+    }
+    h5{
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        margin-top: -250px;
+        font: bold 15px/1 'Simplehae';
+        color: #fff;
+
+
     }
 }
 #navi {
@@ -38,7 +48,7 @@ header{
         padding: 30px 50px;
         position: relative;
         overflow: hidden;
-        opacity: 0.4;
+        opacity: 0.7;
         cursor: pointer;
         transition: transform 1.4s, opacity 1.4s;
         transform-origin: left center;

@@ -19,13 +19,13 @@ body {
 }
 
 header {
-  width: 450px;
+  width: 400px;
   height: 100%;
   position: absolute;
   top: 0px;
   left: 0px;
   background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(2px);
+  --webkit-backdrop-filter: blur(2px);
   z-index: 4;
 }
 header h1 {
@@ -33,16 +33,24 @@ header h1 {
   top: 50%;
   left: 50px;
   margin-top: -300px;
-  font: bold 40px/1 "orbitron";
+  font: bold 40px/1 "Dangdanghae";
   color: #fff;
 }
 header h1::after {
   content: "";
   display: block;
-  width: 160px;
-  height: 3px;
+  width: 292px;
+  height: 2px;
   background: #fff;
-  margin-top: 8px;
+  margin-top: 5px;
+}
+header h5 {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  margin-top: -250px;
+  font: bold 15px/1 "Simplehae";
+  color: #fff;
 }
 
 #navi {
@@ -57,7 +65,7 @@ header h1::after {
   padding: 30px 50px;
   position: relative;
   overflow: hidden;
-  opacity: 0.4;
+  opacity: 0.7;
   cursor: pointer;
   transition: transform 1.4s, opacity 1.4s;
   transform-origin: left center;
@@ -221,6 +229,43 @@ section article.on .slogan h2::after, section article.on .slogan .p1::after, sec
 }
 section article.lower {
   z-index: 2;
+}
+section article:nth-of-type(1).mask {
+  -webkit-mask: url(../src/mask1.png);
+  -webkit-mask-size: 2300% 100%;
+  animation: mask-play 1.4s steps(22) forwards;
+}
+section article:nth-of-type(2).mask {
+  -webkit-mask: url(../src/mask2.png);
+  -webkit-mask-size: 3000% 100%;
+  animation: mask-play 1.4s steps(29) forwards;
+}
+section article:nth-of-type(3).mask {
+  -webkit-mask: url(../src/mask3.png);
+  -webkit-mask-size: 7100% 100%;
+  animation: mask-play 1.4s steps(70) forwards;
+}
+section article:nth-of-type(4).mask {
+  -webkit-mask: url(../src/mask4.png);
+  -webkit-mask-size: 7400% 100%;
+  animation: mask-play 1.4s steps(73) forwards;
+}
+
+@keyframes mask-play {
+  0% {
+    -webkit-mask-position: 0% 0%;
+  }
+  100% {
+    -webkit-mask-position: 100% 0%;
+  }
+}
+@font-face {
+  font-family: Dangdanghae;
+  src: url(../src/Cafe24Dangdanghae.ttf);
+}
+@font-face {
+  font-family: Simplehae;
+  src: url(../src/Cafe24Simplehae.ttf);
 }
 
 /*# sourceMappingURL=style.css.map */
